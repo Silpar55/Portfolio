@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Text from "../global/Text";
 
-export const ContactMe = () => {
+const ContactMe = () => {
   const iconSocial = [
     {
       faGithub,
@@ -48,3 +48,5 @@ export const ContactMe = () => {
     </section>
   );
 };
+
+export default ContactMe;

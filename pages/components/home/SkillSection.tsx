@@ -36,7 +36,7 @@ const iconLanguages = [
 import React from "react";
 import Link from "next/link";
 
-export const SkillSection = () => {
+const SkillSection = () => {
   return (
     <section className="md:flex gap-5 w-11/12 lg:w-8/12 m-auto mt-10">
       {
@@ -80,3 +80,5 @@ export const SkillSection = () => {
     </section>
   );
 };
+
+export default SkillSection;

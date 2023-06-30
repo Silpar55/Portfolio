@@ -1,4 +1,4 @@
-export const Main = () => {
+const Main = () => {
   return (
     <main className="bg-slate-700 p-5">
       <div className="flex-col justify-center space-y-5">
@@ -15,3 +15,5 @@ export const Main = () => {
     </main>
   );
 };
+
+export default Main;

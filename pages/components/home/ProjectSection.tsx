@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import Text from "../global/Text";
 
-export const ProjectSection = () => {
+const ProjectSection = () => {
   let i = [1, 2, 3, 4];
 
   return (
@@ -59,3 +59,5 @@ export const ProjectSection = () => {
     </section>
   );
 };
+
+export default ProjectSection;
