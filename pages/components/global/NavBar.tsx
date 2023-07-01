@@ -15,10 +15,10 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="flex justify-center sm:space-x-4 md:space-x-8 md:text-lg bg-slate-50 mb-2">
+    <nav className="z-30 text-sm fixed top-0 w-full flex justify-center sm:space-x-4 md:space-x-8 md:text-lg bg-slate-50">
       {links.map((link: link, index) => (
         <Link
-          className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-300 hover:text-slate-900"
+          className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-300 hover:text-slate-900 text-center"
           key={index}
           href={link.url}
         >

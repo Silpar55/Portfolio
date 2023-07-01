@@ -183,7 +183,7 @@ export default function index() {
               slideNumber={(slideNumber += 1)}
               slide={slide}
             >
-              <h1 className="font-bold text-2xl text-yellow-300 mb-5">
+              <h1 className="font-bold text-2xl text-yellow-300 my-2">
                 Other technologies...
               </h1>
               <table className="table-fixed w-full md:w-8/12 m-auto text-center">
@@ -214,6 +214,7 @@ export default function index() {
                                 icon={icon}
                                 color={color}
                                 size="xl"
+                                className="pointer-events-auto hover:scale-105 duration-500 transition"
                               />
                               {technology === "C++" && (
                                 <>
@@ -221,11 +222,13 @@ export default function index() {
                                     icon={faPlus}
                                     size="2xs"
                                     color={color}
+                                    className="pointer-events-auto hover:scale-110 duration-300 transition"
                                   />
                                   <FontAwesomeIcon
                                     icon={faPlus}
                                     size="2xs"
                                     color={color}
+                                    className="pointer-events-auto hover:scale-105 duration-500 transition"
                                   />
                                 </>
                               )}
@@ -257,7 +260,7 @@ export default function index() {
                                   <a
                                     href="https://github.com/Silpar55"
                                     target="_blank"
-                                    className="text-blue-500 duration-500 hover:text-blue-700 transition"
+                                    className="text-blue-500 duration-500 hover:text-blue-700  transition pointer-events-auto"
                                   >
                                     Silpar55
                                   </a>
@@ -273,7 +276,7 @@ export default function index() {
               </table>
             </Slide>
           </div>
-          <div className="relative flex flex-col-reverse md:flex-row md:rotate-180 justify-between items-center w-full h-full p-5 ">
+          <div className="relative flex flex-col-reverse md:flex-row md:rotate-180 justify-between items-center w-full h-full pb-5 py-10 md:px-5 md:py-0 ">
             <div>
               <FontAwesomeIcon
                 icon={faAngleRight}
@@ -305,7 +308,6 @@ export default function index() {
           </div>
         </div>
       </section>
-      <section className="px-5 xl:w-11/12 m-auto"></section>
     </>
   );
 }
