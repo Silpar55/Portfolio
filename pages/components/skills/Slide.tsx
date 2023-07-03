@@ -20,16 +20,17 @@ const Slide = ({ imgUrl, imgUrl2, title, text }: Props) => {
           {text}
         </p>
       </div>
-      <div className="flex-col xl:basis-1/3 px-5">
+      <div className="flex-col xl:basis-1/3 sm:px-5">
         {imgUrl && (
           <Image
             src={imgUrl}
             alt="Picture of the author"
             width={400}
             height={400}
+            loading="eager"
             className={`object-cover w-auto  ${
-              imgUrl2 ? "h-32 md:h-56" : " h-44"
-            } xl:w-full xl:h-auto m-auto`}
+              imgUrl2 ? "h-32 " : " h-44"
+            } xl:w-full xl:h-auto m-auto md:h-56`}
           />
         )}
         {imgUrl2 && (
