@@ -1,6 +1,6 @@
 const Main = () => {
   return (
-    <main className="bg-slate-700 p-5 mt-10">
+    <main className="bg-slate-700 p-5">
       <div className="flex-col justify-center space-y-5">
         <h1 className="text-5xl text-center text-indigo-300 ">
           Welcome to my portfolio
