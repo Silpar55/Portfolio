@@ -1,11 +1,12 @@
 type Props = {
   children: React.ReactNode;
+  style?: string;
 };
 
-const Text = ({ children }: Props) => {
+const Text = ({ children, style }: Props) => {
   return (
     <div className="text-xl text-center mt-5">
-      <p>{children}</p>
+      <p className={`${typeof style === "string" && style}`}>{children}</p>
     </div>
   );
 };

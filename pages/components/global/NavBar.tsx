@@ -1,30 +1,38 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 interface link {
   title: string;
   url: string;
 }
+const links = [
+  { title: "Home", url: "/" },
+  { title: "Skills", url: "/skills" },
+  { title: "My projects", url: "/projects" },
+  { title: "Contact me", url: "/contact-me" },
+  { title: "About me", url: "/about-me" },
+];
 
 const NavBar = () => {
-  const links = [
-    { title: "Home", url: "/" },
-    { title: "Skills", url: "/skills" },
-    { title: "My projects", url: "/projects" },
-    { title: "Contact me", url: "/contact-me" },
-    { title: "About", url: "/about-me" },
-  ];
+  const router = useRouter();
+
+  const { pathname } = router;
 
   return (
     <nav
-      className={`z-10 text-sm sticky top-0 w-full flex justify-center sm:space-x-4 md:space-x-8 md:text-lg bg-slate-50`}
+      className={`flex flex-col justify-center items-center w-full bg-slate-200 z-10 text-lg sm:sticky sm:top-0 sm:flex-row sm:space-x-4 md:space-x-8 md:text-lg`}
     >
-      {links.map((link: link, index) => (
+      {links.map(({ title, url }: link, index) => (
         <Link
-          className="rounded-lg px-3 py-2 my-2 text-slate-700 font-medium hover:bg-slate-300 hover:text-slate-900 text-center"
+          className={`rounded-lg px-3 py-2 my-1 sm:my-2 text-slate-700 ${
+            pathname === url
+              ? "bg-sky-400 text-white"
+              : "hover:bg-slate-300 hover:text-slate-900 text-center"
+          } font-medium`}
           key={index}
-          href={link.url}
+          href={url}
         >
-          {link.title}
+          {title}
         </Link>
       ))}
     </nav>

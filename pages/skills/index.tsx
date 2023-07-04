@@ -16,6 +16,7 @@ import Text from "../components/global/Text";
 import Slide from "../components/skills/Slide";
 
 import TableSkills from "../components/skills/TableSkills";
+import Image from "next/image";
 
 // Create an array with the content of each slide
 const slidesContent = [
@@ -64,7 +65,7 @@ export default function index() {
           navigation
           scrollbar={{ draggable: true }}
           pagination={{ clickable: true }}
-          className="bg-neutral-300 h-screen"
+          className="bg-black bg-opacity-80 h-screen text-white"
         >
           {slidesContent.map(({ title, text, image, secondImage }, index) => (
             <SwiperSlide key={index} className="m-auto">
@@ -78,17 +79,24 @@ export default function index() {
           ))}
         </Swiper>
       </section>
-      <section className="flex-col xl:flex-row gap-5 p-5 items-center ">
-        <div className="text-center basis-1/2">
-          <h1 className="font-bold text-5xl text-cyan-600 mb-1">
-            Other technologies...
-          </h1>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-            voluptates incidunt ratione ab cum accusamus numquam nemo
-            accusantium, totam asperiores debitis at sed ea deleniti quam
-            dolorem nam voluptatum id!
-          </Text>
+      <section className="flex flex-col lg:flex-row gap-5 p-5 items-center ">
+        <div className="text-center sm:px-10 basis-1/2 ">
+          <div>
+            <h1 className="font-bold text-5xl sm:text-6xl text-cyan-600 mb-1">
+              Other technologies
+            </h1>
+            <Text style="text-2xl font-semibold">
+              The following technologies are not my forte, but I have used them
+              in some projects. I would like to continue learning about them.
+            </Text>
+          </div>
+          <Image
+            src={"/images/programming.svg"}
+            width={200}
+            height={200}
+            alt="HTML and CSS"
+            className="object-cove w-10/12 mt-5 m-auto hidden lg:block"
+          />
         </div>
         <TableSkills />
       </section>

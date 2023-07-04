@@ -6,6 +6,7 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import Text from "../global/Text";
+import Link from "next/link";
 
 const ContactMe = () => {
   const iconSocial = [
@@ -27,7 +28,10 @@ const ContactMe = () => {
     <section className="mt-10 relative  h-72  w-11/12 md:w-7/12 transition duration-500 m-auto mb-10">
       <Image src={"/images/collection.svg"} alt="collection" fill />
       <div className=" bg-black bg-opacity-60 absolute w-full h-full rounded-lg transition hover:bg-opacity-70 duration-500 ">
-        <div className="flex flex-col justify-center items-center h-full text-white p-2">
+        <Link
+          href={"/contact-me"}
+          className="flex flex-col justify-center items-center h-full text-white p-2"
+        >
           <h1 className="text-5xl  font-bold mb-5">Contact me</h1>
           <div className="flex justify-center gap-5">
             {iconSocial.map((icon, index) => (
@@ -43,7 +47,7 @@ const ContactMe = () => {
             I am always open to new opportunities. If you want to contact me for
             any reason, please feel free to contact me!
           </Text>
-        </div>
+        </Link>
       </div>
     </section>
   );

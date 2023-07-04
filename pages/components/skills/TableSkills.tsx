@@ -79,10 +79,10 @@ const tableContent = [
 const TableSkills = () => {
   return (
     <table className="table-fixed w-full md:w-8/12 m-auto text-center">
-      <thead className="text-2xl font-semibold">
+      <thead className="text-4xl font-semibold">
         <tr>
           <th>Technology</th>
-          <th>Experience level</th>
+          <th>Experience</th>
         </tr>
       </thead>
       <tbody className="text-xl font-medium">
